@@ -1,1 +1,215 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
 
+body {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 600px;
+  background-color: #fae16c;
+}
+
+.search-section {
+  padding-bottom: 0px;
+  margin: 0;
+}
+
+.test-lg {
+  background-color: #000;
+  font-size: 72px;
+}
+
+.container {
+  font-family: "Roboto Condensed", Sans-Serif;
+  font-size: 35px;
+  flex: 1 0 auto;
+}
+
+p {
+  font-family: "Cabin", Sans-Serif;
+  font-size: 16px;
+}
+
+.search-bar {
+  margin: 0 auto;
+  margin-bottom: 5px;
+  max-width: 525px;
+  min-width: 315px;
+}
+
+.search-title {
+  font-size: 18px;
+  float: left;
+  text-align: left;
+  font-family: "Cabin", Sans-Serif;
+  margin-top: 17px;
+}
+
+a {
+  color: #2c4755;
+  font-family: "Cabin", Sans-Serif;
+  font-size: 18px;
+}
+.use-location {
+  text-align: right;
+  margin-right: 0px;
+  float: right;
+}
+
+.main {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: rgb(201, 201, 201) solid 1px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 0px;
+  max-width: 500px;
+}
+.currently-sup-info {
+  margin-top: 20px;
+}
+.currently-temp,
+.currently-city {
+  font-family: "Cabin", Sans-Serif;
+}
+.currently-temp {
+  font-size: 62px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.currently-city {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.currently-country {
+  font-family: "Roboto Condensed", Sans-Serif;
+  font-size: 14px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.current-desc {
+  font-size: 16px;
+  text-align: center;
+}
+.wind,
+.humidity {
+  font-size: 12px;
+  text-align: center;
+}
+
+#currentlyIcon {
+  display: block;
+  margin: 0 auto;
+}
+
+hr {
+  margin: 2px;
+}
+.weather-icon {
+  color: #c2b67e;
+  text-align: center;
+}
+
+.forecast-temp-descrip {
+  display: inline-block;
+  font-family: "Cabin", Sans-Serif;
+  font-size: 18px;
+
+  text-align: center;
+}
+
+.weather-icon {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.forecast-date {
+  font-family: "Roboto Condensed", Sans-Serif;
+  font-size: 22px;
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+.forecast-high,
+.forecast-low {
+  font-family: "Roboto Condensed", Sans-Serif;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.btn-primary {
+  font-family: "Roboto Condensed", Sans-Serif;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  background-color: #2c4755;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #121e24;
+}
+
+.btn-outline-secondary {
+  font-family: "Roboto Condensed", Sans-Serif;
+  background-color: #2c4755;
+  color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #121e24;
+}
+
+.repo-link {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .currently-temp,
+  .currently-city {
+    font-size: 20px;
+  }
+  .forecast-date,
+  .forecast-high,
+  .forecast-low,
+  .forecast-temp-descrip {
+    font-size: 50%;
+  }
+  .forecast-temp-descrip {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #currentlyIcon,
+  .current-desc,
+  .wind,
+  .humidity,
+  .col-5 {
+    display: none;
+  }
+  .col-7 {
+    margin: 0 auto;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
