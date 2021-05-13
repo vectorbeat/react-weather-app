@@ -7,7 +7,8 @@ export default function CurrentWeather(props) {
         <div className="row col-12">
           <div className="currently-primary col-7">
             <p className="currently-temp">
-              {Math.round(props.data.temperature)}°F
+              {Math.round(props.data.temperature)}
+              <p className="weather-unit">°F</p>
             </p>
             <p className="currently-city" id="currentlyCity">
               {props.data.city}
