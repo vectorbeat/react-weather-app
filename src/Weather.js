@@ -15,7 +15,7 @@ export default function Weather(props) {
       country: response.data.sys.country,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
   function search() {

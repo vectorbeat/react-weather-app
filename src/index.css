@@ -69,9 +69,7 @@ a {
   margin-top: 0px;
   max-width: 500px;
 }
-.currently-sup-info {
-  margin-top: 20px;
-}
+
 .currently-temp,
 .currently-city {
   font-family: "Cabin", Sans-Serif;
