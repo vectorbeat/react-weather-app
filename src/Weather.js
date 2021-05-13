@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import CurrentWeather from "./CurrentWeather";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -11,6 +12,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
+      country: response.data.sys.country,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
@@ -47,37 +49,7 @@ export default function Weather(props) {
                 </button>
               </div>
             </form>
-
-            <div className="main shadow-lg p-3 mb-5 bg-body rounded">
-              <div className="row col-12">
-                <div className="currently-primary col-7">
-                  <p className="currently-temp">
-                    {Math.round(weatherData.temperature)}°F
-                  </p>
-                  <p className="currently-city" id="currentlyCity">
-                    {weatherData.city}
-                  </p>
-                  <p className="currently-country">US</p>
-                </div>
-                <div className="currently-sup-info col-5">
-                  <img
-                    src={weatherData.iconUrl}
-                    alt={weatherData.description}
-                  />
-
-                  <div className="current-desc text-capitalize">
-                    {weatherData.description}
-                  </div>
-
-                  <div className="wind">Wind {weatherData.wind}mph</div>
-                  <div className="humidity">
-                    Humidity {weatherData.humidity}%
-                  </div>
-                </div>
-
-                <hr />
-              </div>
-            </div>
+            <CurrentWeather data={weatherData} />
           </div>
         </div>
       </div>
