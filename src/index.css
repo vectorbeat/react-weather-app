@@ -26,6 +26,7 @@ body {
   font-family: "Roboto Condensed", Sans-Serif;
   font-size: 35px;
   flex: 1 0 auto;
+  max-width: 800px;
 }
 
 p {
