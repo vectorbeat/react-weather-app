@@ -4,7 +4,7 @@ import CurrentWeather from "./CurrentWeather";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -18,12 +18,30 @@ export default function Weather(props) {
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     });
   }
+  function search() {
+    const apiKey = "fb8b95424c106907f53c4fc0092c4971";
+    let units = "imperial";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
   if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="container">
           <div className="row search-section">
-            <form className="search-bar row" id="search">
+            <form
+              className="search-bar row"
+              id="search"
+              onSubmit={handleSubmit}
+            >
               <div className="search-title col-6">Search</div>
               <div className="use-location col-6">
                 <a href="https://www.google.com" id="use-current">
@@ -39,6 +57,7 @@ export default function Weather(props) {
                   aria-label="Recipient's username"
                   aria-describedby="button-addon2"
                   autoFocus="on"
+                  onChange={handleCityChange}
                 />
                 <button
                   className="btn btn-outline-secondary"
@@ -55,11 +74,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "fb8b95424c106907f53c4fc0092c4971";
-
-    let units = "imperial";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
     return "Loading...";
   }
 }
