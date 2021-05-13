@@ -1,4 +1,6 @@
 import React from "react";
+import Weather from "./Weather";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function CurrentWeather(props) {
   return (
@@ -6,10 +8,8 @@ export default function CurrentWeather(props) {
       <div className="main shadow-lg p-3 mb-5 bg-body rounded">
         <div className="row col-12">
           <div className="currently-primary col-7">
-            <p className="currently-temp">
-              {Math.round(props.data.temperature)}
-              <p className="weather-unit">°F</p>
-            </p>
+            <WeatherTemperature farenheit={props.data.temperature} />
+
             <p className="currently-city" id="currentlyCity">
               {props.data.city}
             </p>
