@@ -106,9 +106,13 @@ a {
   display: inline-block;
   padding-left: 4px;
   position: relative;
-  top: -28px;
-  color: red;
-  font-size: 22px;
+  top: -31px;
+  color: #000;
+  font-size: 18px;
+}
+
+.weather-unit a {
+  color: #ec6e4b;
 }
 
 #currentlyIcon {
