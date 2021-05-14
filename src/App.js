@@ -11,6 +11,7 @@ export default function App() {
           <a
             href="https://github.com/vectorbeat/react-weather-app"
             target="_blank"
+            rel="noreferrer"
           >
             Access my github
           </a>

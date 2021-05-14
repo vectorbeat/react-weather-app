@@ -1,5 +1,5 @@
 import React from "react";
-import Weather from "./Weather";
+
 import WeatherTemperature from "./WeatherTemperature";
 
 export default function CurrentWeather(props) {
