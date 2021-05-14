@@ -7,6 +7,14 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather defaultCity="Chicago" />
+        <footer>
+          <a
+            href="https://github.com/vectorbeat/react-weather-app"
+            target="_blank"
+          >
+            Access my github
+          </a>
+        </footer>
       </div>
     </div>
   );
