@@ -212,6 +212,8 @@ hr {
   .current-desc,
   .wind,
   .humidity,
+  .weather-unit,
+  .use-location,
   .col-5 {
     display: none;
   }
