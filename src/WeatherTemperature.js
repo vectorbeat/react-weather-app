@@ -28,7 +28,7 @@ export default function WeatherTemperature(props) {
     return (
       <div className="WeatherTemperature">
         <p className="currently-temp">
-          {Math.round(props.farenheit)}
+          {Math.round((props.farenheit - 30) / 2)}
           <p className="weather-unit">
             <a href="/" onClick={showFarenheit}>
               °F{" "}
