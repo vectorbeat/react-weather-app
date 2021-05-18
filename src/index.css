@@ -131,7 +131,7 @@ hr {
 .forecast-temp-descrip {
   display: inline-block;
   font-family: "Cabin", Sans-Serif;
-  font-size: 18px;
+  font-size: 16px;
 
   text-align: center;
 }
@@ -147,9 +147,6 @@ hr {
   line-height: 1;
   text-align: center;
   display: inline-block;
-
-  margin-top: 30px;
-  margin-bottom: 5px;
 }
 .forecast-high,
 .forecast-low {
