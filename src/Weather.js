@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import CurrentWeather from "./CurrentWeather";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -68,7 +69,21 @@ export default function Weather(props) {
                 </button>
               </div>
             </form>
-            <CurrentWeather data={weatherData} />
+            <div className="main shadow-lg p-3 mb-5 bg-body rounded">
+              <CurrentWeather data={weatherData} />
+              <WeatherForecast />
+              <WeatherForecast />
+              <WeatherForecast />
+              <WeatherForecast />
+              <WeatherForecast />
+              <a
+                href="https://www.google.com"
+                className="btn btn-primary"
+                id="tenDay"
+              >
+                View 10 day forecast
+              </a>
+            </div>
           </div>
         </div>
       </div>
