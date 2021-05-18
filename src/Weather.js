@@ -10,6 +10,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
@@ -71,11 +72,7 @@ export default function Weather(props) {
             </form>
             <div className="main shadow-lg p-3 mb-5 bg-body rounded">
               <CurrentWeather data={weatherData} />
-              <WeatherForecast />
-              <WeatherForecast />
-              <WeatherForecast />
-              <WeatherForecast />
-              <WeatherForecast />
+              <WeatherForecast coordinates={weatherData.coordinates} />
               <a
                 href="https://www.google.com"
                 className="btn btn-primary"
