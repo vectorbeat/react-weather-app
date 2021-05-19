@@ -17,7 +17,7 @@ export default function WeatherForecast(props) {
           <div className="Day col-12">
             <div className="forecast-date col-2">Mon</div>
             <div className="weather-icon col-2">
-              <i className="fas fa-cloud" width="70px"></i>
+              {forecastData[0].weather[0].icon}
             </div>
             <div className="forecast-high col-2">
               High
@@ -40,6 +40,7 @@ export default function WeatherForecast(props) {
     let apiKey = "fb8b95424c106907f53c4fc0092c4971";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
+
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
     return null;
