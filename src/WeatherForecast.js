@@ -17,9 +17,7 @@ export default function WeatherForecast(props) {
         <div className="row align-items-center">
           <div className="Day col-12">
             <div className="forecast-date col-2">Mon</div>
-            <div className="weather-icon col-2">
-              {forecastData[0].weather[0].icon}
-            </div>
+            <div className="weather-icon col-2"></div>
             <div className="forecast-high col-2">
               High
               <br />
