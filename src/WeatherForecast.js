@@ -4,9 +4,8 @@ import axios from "axios";
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecastData, setForecastData] = useState(null);
-
+  console.log(props.coordinates);
   function handleResponse(response) {
-    console.log(response.data.daily);
     setForecastData(response.data.daily);
     setLoaded(true);
   }
