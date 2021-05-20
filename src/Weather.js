@@ -50,6 +50,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
+ 
   }
 
   function handleSubmit(event) {
@@ -60,7 +61,7 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
-  
+
   function search() {
     const apiKey = "fb8b95424c106907f53c4fc0092c4971";
     let units = "imperial";
