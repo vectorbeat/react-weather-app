@@ -17,8 +17,12 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row align-items-center">
           <div className="Day col-12">
-            <WeatherForecastDay data={forecastData[0]} />
             <WeatherForecastDay data={forecastData[1]} />
+            <WeatherForecastDay data={forecastData[2]} />
+            <WeatherForecastDay data={forecastData[3]} />
+            <WeatherForecastDay data={forecastData[4]} />
+            <WeatherForecastDay data={forecastData[5]} />
+
             <hr />
           </div>
         </div>
