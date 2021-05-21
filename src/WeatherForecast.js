@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 
@@ -21,9 +21,13 @@ export default function WeatherForecast(props) {
         <div className="row align-items-center">
           <div className="Day col-12">
             <WeatherForecastDay data={forecastData[1]} />
+            <hr />
             <WeatherForecastDay data={forecastData[2]} />
+            <hr />
             <WeatherForecastDay data={forecastData[3]} />
+            <hr />
             <WeatherForecastDay data={forecastData[4]} />
+            <hr />
             <WeatherForecastDay data={forecastData[5]} />
 
             <hr />
@@ -35,6 +39,7 @@ export default function WeatherForecast(props) {
     let apiKey = "fb8b95424c106907f53c4fc0092c4971";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
+
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
     return null;
