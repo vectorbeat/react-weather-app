@@ -195,12 +195,14 @@ hr {
   }
   .forecast-date,
   .forecast-high,
-  .forecast-low,
-  .forecast-temp-descrip {
-    font-size: 50%;
+  .forecast-low {
+    font-size: 40%;
   }
   .forecast-temp-descrip {
     font-size: 11px;
+  }
+  .weather-icon {
+    display: none;
   }
 }
 
@@ -210,7 +212,6 @@ hr {
   .wind,
   .humidity,
   .weather-unit,
-  .use-location,
   .col-5 {
     display: none;
   }
