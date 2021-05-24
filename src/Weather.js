@@ -11,11 +11,7 @@ export default function Weather(props) {
     <div className="row search-section">
       <form className="search-bar row" id="search" onSubmit={handleSubmit}>
         <div className="search-title col-6">Search</div>
-        <div className="use-location col-6">
-          <a href="https://www.google.com" id="use-current">
-            Use Current location
-          </a>
-        </div>
+
         <div className="input-group mb-3">
           <input
             type="search"
@@ -50,7 +46,6 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
- 
   }
 
   function handleSubmit(event) {
@@ -76,13 +71,6 @@ export default function Weather(props) {
           <div className="main shadow-lg p-3 mb-5 bg-body rounded">
             <CurrentWeather data={weatherData} />
             <WeatherForecast coordinates={weatherData.coordinates} />
-            <a
-              href="https://www.google.com"
-              className="btn btn-primary"
-              id="tenDay"
-            >
-              View 10 day forecast
-            </a>
           </div>
         </div>
       </div>
